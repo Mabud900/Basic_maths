@@ -1,0 +1,21 @@
+1) Fundamental Operations
+*) Modulo(%): N%10 yeilds the last(least significant) digit of a non-negative integer N.
+*) Integer Division(/): N=N/10 removes the last digit from N.
+
+2) Extraction order
+*) This direct approach extracts digits in reverse (from least to most significant).
+*) Exmaple: N=7789 produces the sequence 9,8,7,7.
+
+3) Why reverse?
+Because the algorithm always picks the last digit first, then strips it off.
+
+4) Coverting to forward order
+You can restore the original digit one by one of:
+(1) stack LIFO: Push each extracted digit,then pop to print in original order.
+(2) Array/vector+ Reverse: Store digits in a container,then iterate it backward.
+(3) String Conversion: to_String(N) gives a string of digits in forward order.
+
+5) Handling Edge cases
+*) Zero: The loop while(N>0) never executes. Handle N==0 seperately
+*) Negative numbers: Take absolute value or handle the '_' sign explicitely.
+*) Floating-Point Numbers: %10 and integer division are invalid. Use string-based parsing if needed.
