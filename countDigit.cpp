@@ -12,10 +12,11 @@ class Solution{
 };
 int main(){
     int n;
-    cout<<"Enter the value of n: ";
+    cout<<"Enter the number: ";
     cin>>n;
     Solution obj;
     int res=obj.countDigit(n);
-    cout<<res;
+    cout<<"number of digits="<<res;
     return 0;
 }
+//time complexity=log(n)
